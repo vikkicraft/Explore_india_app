@@ -24,7 +24,7 @@ class _HomeState extends State<Home> {
           scrollDirection: Axis.vertical,
           itemCount: images.length,
           itemBuilder: (_, index) {
-            //
+            //Main Screen and background image
             return Container(
               width: double.maxFinite,
               height: double.maxFinite,
@@ -41,14 +41,15 @@ class _HomeState extends State<Home> {
 
               //
               child: Container(
-                margin: EdgeInsets.only(top: 150, left: 20, right: 20),
+                margin: EdgeInsets.only(top: 100, left: 20, right: 20),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         AppLargeText(
-                          color: Colors.black26,
+                          color: Colors.black,
                           text: "Hello",
                           size: 40,
                           fontWeight: FontWeight.bold,
@@ -79,7 +80,22 @@ class _HomeState extends State<Home> {
                           width: 90,
                         ),
                       ],
-                    )
+                    ),
+                    Column(
+                      children: List.generate(3, (indexDots) {
+                        return Container(
+                          margin: const EdgeInsets.only(bottom: 2),
+                          width: 8,
+                          height: index == indexDots ? 25 : 8,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            color: index == indexDots
+                                ? Colors.blue
+                                : Colors.black45,
+                          ),
+                        );
+                      }),
+                    ),
                   ],
                 ),
               ),
