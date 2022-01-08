@@ -24,6 +24,9 @@ class _HomeState extends State<Home> {
           scrollDirection: Axis.vertical,
           itemCount: images.length,
           itemBuilder: (_, index) {
+
+
+
             //Main Screen and background image
             return Container(
               width: double.maxFinite,
@@ -39,7 +42,9 @@ class _HomeState extends State<Home> {
                 ),
               ),
 
-              //
+
+
+              // Bold text
               child: Container(
                 margin: EdgeInsets.only(top: 100, left: 20, right: 20),
                 child: Row(
@@ -81,6 +86,10 @@ class _HomeState extends State<Home> {
                         ),
                       ],
                     ),
+
+
+
+                    //navigation bar right indicator
                     Column(
                       children: List.generate(3, (indexDots) {
                         return Container(

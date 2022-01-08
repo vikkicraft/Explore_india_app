@@ -1,7 +1,7 @@
 // ignore_for_file: deprecated_member_use, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import '../home.dart';
+import 'Home_page.dart';
 import 'search_page.dart';
 import 'my_page.dart';
 import 'bar_item_page.dart';
@@ -15,7 +15,7 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   List pages = [
-    Home(),
+    HomePage(),
     BarItemPage(),
     MyPage(),
     SearchPage(),
