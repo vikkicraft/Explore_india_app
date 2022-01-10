@@ -73,8 +73,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 20),
-              height: 300,
+              margin: EdgeInsets.only(top: 10, left: 15),
+              height: 200,
               width: double.maxFinite,
               child: TabBarView(
                 controller: _tabController,
@@ -87,7 +87,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                         return Container(
                           padding: EdgeInsets.only(right: 20),
                           child: Image(
-                            height: 100,
+                            height: 30,
                             width: 100,
                             fit: BoxFit.cover,
                             image: AssetImage("assets/images/expo.jpg"),
@@ -98,7 +98,47 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   Text("Hello_3"),
                 ],
               ),
-            )
+            ),
+
+            SizedBox(
+              height: 20,
+            ),
+            //section 2
+            Container(
+              margin: EdgeInsets.only(left: 15, right: 15),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  AppLargeText(
+                      color: Colors.black,
+                      text: "Explore",
+                      size: 15,
+                      fontWeight: FontWeight.normal),
+                  AppLargeText(
+                      color: Colors.blue,
+                      text: "see all",
+                      size: 15,
+                      fontWeight: FontWeight.bold),
+                ],
+              ),
+            ),
+
+            Container(
+              padding: EdgeInsets.only(left: 15),
+              height: 50,
+              child: ListView.builder(
+                itemCount: 8,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (BuildContext context, int index) {
+                  return Container(
+                    margin: EdgeInsets.only(left: 15),
+                    width: 50,
+                    color: Colors.blue,
+                    child: Center(child: Text("Explore")),
+                  );
+                },
+              ),
+            ),
           ],
         ),
       ),
