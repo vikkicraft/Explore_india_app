@@ -14,6 +14,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  //navigation pages...........................................................
   List pages = [
     HomePage(),
     BarItemPage(),
@@ -38,10 +39,10 @@ class _MainPageState extends State<MainPage> {
         currentIndex: currentIndex,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        
         unselectedItemColor: Colors.grey,
         selectedItemColor: Colors.black,
-        // ignore: prefer_const_literals_to_create_immutables
+
+        //navigation menus..................................................
         items: [
           BottomNavigationBarItem(
             title: Text("Home"),

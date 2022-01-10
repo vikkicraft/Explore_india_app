@@ -21,12 +21,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           children: [
             Container(
               padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+
+              //header........................................................
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Icon(Icons.menu),
-
-                  //profile image
                   Container(
                     height: 50,
                     width: 50,
@@ -41,6 +41,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             SizedBox(
               height: 10,
             ),
+
+            //Discover Section.................................................
             Container(
               margin: EdgeInsets.only(
                 left: 20,
@@ -56,7 +58,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               height: 10,
             ),
 
-            //tap bar section
+            //tap bar section..............................................
             Container(
               child: TabBar(
                 isScrollable: true,
