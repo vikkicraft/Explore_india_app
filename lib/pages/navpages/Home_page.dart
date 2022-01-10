@@ -73,16 +73,29 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ),
             ),
             Container(
+              margin: EdgeInsets.only(top: 20),
               height: 300,
               width: double.maxFinite,
               child: TabBarView(
                 controller: _tabController,
                 // ignore: prefer_const_literals_to_create_immutables
                 children: [
-                  
-                  Text("Hello_1"),
-                  Text("Hello_1"),
-                  Text("Hello_1"),
+                  ListView.builder(
+                      itemCount: 5,
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (BuildContext context, int index) {
+                        return Container(
+                          padding: EdgeInsets.only(right: 20),
+                          child: Image(
+                            height: 100,
+                            width: 100,
+                            fit: BoxFit.cover,
+                            image: AssetImage("assets/images/expo.jpg"),
+                          ),
+                        );
+                      }),
+                  Text("Hello_2"),
+                  Text("Hello_3"),
                 ],
               ),
             )
