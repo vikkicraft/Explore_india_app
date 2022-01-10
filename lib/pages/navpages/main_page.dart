@@ -38,8 +38,8 @@ class _MainPageState extends State<MainPage> {
         currentIndex: currentIndex,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        backgroundColor: Colors.blue,
-        unselectedItemColor: Colors.white,
+        
+        unselectedItemColor: Colors.grey,
         selectedItemColor: Colors.black,
         // ignore: prefer_const_literals_to_create_immutables
         items: [
