@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'pages/navpages/detail_page.dart';
 import 'pages/navpages/main_page.dart';
 import 'pages/home.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
 
       //
       routes: {
-        "/": (context) => MainPage(),
+        "/": (context) => DetailPage(),
       },
     );
   }
