@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/widgets/app_botton.dart';
 import 'package:flutter_application_1/widgets/bold.dart';
+import 'package:flutter_application_1/widgets/button.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({Key? key}) : super(key: key);
@@ -9,6 +11,8 @@ class DetailPage extends StatefulWidget {
 }
 
 class _DetailPageState extends State<DetailPage> {
+  int getStar = 4;
+  int selected = -1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,7 +49,7 @@ class _DetailPageState extends State<DetailPage> {
                       ),
                     ),
 
-                    //..............
+                    //...............................................................
                     IconButton(
                       onPressed: () {},
                       icon: Icon(
@@ -77,6 +81,7 @@ class _DetailPageState extends State<DetailPage> {
                   ),
                 ),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     //Large Himalaya Text......................................
                     Row(
@@ -94,9 +99,9 @@ class _DetailPageState extends State<DetailPage> {
                             fontWeight: FontWeight.normal),
                       ],
                     ),
-                    SizedBox(
-                      height: 05,
-                    ),
+
+                    SizedBox(height: 05),
+
                     Row(
                       children: [
                         Icon(Icons.location_on),
@@ -108,6 +113,101 @@ class _DetailPageState extends State<DetailPage> {
                           style: TextStyle(
                             color: Colors.black.withOpacity(0.5),
                           ),
+                        ),
+                      ],
+                    ),
+
+                    SizedBox(height: 15),
+
+                    Row(
+                      children: [
+                        Wrap(
+                          children: List.generate(5, (index) {
+                            return Icon(
+                              Icons.star,
+                              color:
+                                  getStar > index ? Colors.orange : Colors.grey,
+                            );
+                          }),
+                        ),
+                        SizedBox(width: 5),
+                        Text("4.0"),
+                      ],
+                    ),
+
+                    SizedBox(height: 25),
+
+                    AppLargeText(
+                        color: Colors.black.withOpacity(0.8),
+                        text: "People",
+                        size: 25,
+                        fontWeight: FontWeight.bold),
+
+                    SizedBox(height: 5),
+
+                    AppLargeText(
+                        color: Colors.grey,
+                        text: "Number of people in your group",
+                        size: 16,
+                        fontWeight: FontWeight.normal),
+
+                    SizedBox(height: 15),
+
+                    Wrap(
+                      spacing: 10,
+                      children: List.generate(5, (index) {
+                        return InkWell(
+                          onTap: () {
+                            setState(() {
+                              selected = index;
+                            });
+                          },
+                          child: AppBotton(
+                            textColor:
+                                selected == index ? Colors.white : Colors.black,
+                            color:
+                                selected == index ? Colors.black : Colors.grey,
+                            size: 50,
+                            isIcon: false,
+                            text: (index + 1).toString(),
+
+                            //icon: Icons.favorite_border,
+                          ),
+                        );
+                      }),
+                    ),
+
+                    SizedBox(height: 20),
+
+                    AppLargeText(
+                        color: Colors.black.withOpacity(0.8),
+                        text: "Descrition",
+                        size: 20,
+                        fontWeight: FontWeight.bold),
+
+                    SizedBox(height: 10),
+
+                    AppLargeText(
+                        color: Colors.black.withOpacity(0.8),
+                        text:
+                            "2022 Flutter Master Class |Tutorial for Beginners to Advance | Cubit State Management | API Request",
+                        size: 15,
+                        fontWeight: FontWeight.normal),
+
+                    SizedBox(height: 70),
+                    Row(
+                      children: [
+                        AppBotton(
+                          isIcon: true,
+                          size: 60,
+                          color: Colors.blue,
+                          textColor: Colors.grey,
+                          icon: Icons.favorite_border_outlined,
+                        ),
+
+                        SizedBox(width: 20),
+                        MainButton(
+                          isResponsive: true,
                         ),
                       ],
                     )
