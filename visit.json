@@ -1,0 +1,27 @@
+{
+  "home_item": [
+    {
+      "id": "page-1",
+      "image": "s786vika-First_app/assets/images/image-1.png",
+      "title": "Trip",
+      "destination": "Himalaya",
+      "description": "Files do not need to be stored in your assets folder and mapped in the pubspec. Instead, they can be fetched."
+    },
+
+    {
+      "id": "page-2",
+      "image": "s786vika-First_app/assets/images/image-1.png",
+      "title": "Trip",
+      "destination": "Kerla",
+      "description": "Files do not need to be stored in your assets folder and mapped in the pubspec. Instead, they can be fetched."
+    },
+
+    {
+      "id": "page-3",
+      "image": "s786vika-First_app/assets/images/image-1.png",
+      "title": "Trip",
+      "destination": "West Bengal",
+      "description": "Files do not need to be stored in your assets folder and mapped in the pubspec. Instead, they can be fetched."
+    }
+  ]
+}
