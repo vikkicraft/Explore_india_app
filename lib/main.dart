@@ -1,10 +1,6 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/pages/navpages/Home_page.dart';
-import 'pages/navpages/detail_page.dart';
-import 'pages/navpages/main_page.dart';
-import 'pages/home.dart';
+import 'package:flutter_application_1/pages/home.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -19,11 +15,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.brown,
         appBarTheme: AppBarTheme(),
       ),
-
-      //
-      routes: {
-        "/": (context) => DetailPage(),
-      },
+      home: Home(),
     );
   }
 }

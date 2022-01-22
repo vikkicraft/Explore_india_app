@@ -1,7 +1,9 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/widgets/bold.dart';
 
-class AppBotton extends StatelessWidget {
+class AppButton extends StatelessWidget {
   final double size;
   final Color color;
   final Color textColor;
@@ -10,7 +12,7 @@ class AppBotton extends StatelessWidget {
   bool isIcon;
 
 
-  AppBotton({
+  AppButton({
     Key? key,
     required this.isIcon,
     this.text,

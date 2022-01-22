@@ -162,7 +162,7 @@ class _DetailPageState extends State<DetailPage> {
                               selected = index;
                             });
                           },
-                          child: AppBotton(
+                          child: AppButton(
                             textColor:
                                 selected == index ? Colors.white : Colors.black,
                             color:
@@ -197,7 +197,7 @@ class _DetailPageState extends State<DetailPage> {
                     SizedBox(height: 70),
                     Row(
                       children: [
-                        AppBotton(
+                        AppButton(
                           isIcon: true,
                           size: 60,
                           color: Colors.blue,

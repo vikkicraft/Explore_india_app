@@ -1,0 +1,49 @@
+class MainScreen {
+  late String id;
+  late String image;
+  late String title;
+  late String destination;
+  late String description;
+
+  MainScreen(
+      {required this.id,
+      required this.image,
+      required this.title,
+      required this.destination,
+      required this.description});
+
+// Map to Object.............................................
+  MainScreen.fromMap(Map<String, dynamic> map) {
+    this.id = map["id"];
+    this.image = map["image"];
+    this.title = map["title"];
+    this.destination = map["destination"];
+    this.description = map["description"];
+  }
+
+
+//object to map...................................................
+  Map<String,dynamic> toMap(){
+    return{
+      "id": this.id,
+      "image": this.image,
+      "title": this.title,
+      "destination": this.destination,
+      "description": this.description,
+    };
+  }
+}
+
+
+class Model{
+ var item = [
+id: this.id,
+      image: this.image,
+      title: this.title,
+      destination: this.destination,
+      description: this.description,
+
+ ];
+
+}
+

@@ -1,5 +1,3 @@
-// ignore_for_file: deprecated_member_use, prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'Home_page.dart';
 import 'search_page.dart';
@@ -45,19 +43,19 @@ class _MainPageState extends State<MainPage> {
         //navigation menus..................................................
         items: [
           BottomNavigationBarItem(
-            title: Text("Home"),
+            label:"vikas",
             icon: Icon(Icons.apps),
           ),
           BottomNavigationBarItem(
-            title: Text("Bar"),
+            label:"Bar",
             icon: Icon(Icons.bar_chart_sharp),
           ),
           BottomNavigationBarItem(
-            title: Text("Search"),
+            label:"Search",
             icon: Icon(Icons.search),
           ),
           BottomNavigationBarItem(
-            title: Text("My"),
+            label:"My",
             icon: Icon(Icons.person_add),
           ),
         ],
